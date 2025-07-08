@@ -1,0 +1,126 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.emoji-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.emoji-container h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+#phaser-game {
+  flex: 1;
+  background: black;
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #127803;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#llm-chat {
+  width: 500px;
+  min-width: 320px;
+  height: 100%;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: 0;
+  background-color: #333;
+}
+
+#chat-history {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  list-style-type: none;
+  margin: 0;
+  max-height: calc(100% - 50px);
+}
+
+#chat-history li {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #444;
+  border-radius: 4px;
+}
+
+#llm-chat-form {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #222;
+}
+
+#llm-chat-input {
+  flex: 1;
+  padding: 5px;
+}
+
+#llm-chat-form button {
+  padding: 5px 10px;
+}
